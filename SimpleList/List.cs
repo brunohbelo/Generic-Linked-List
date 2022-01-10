@@ -30,7 +30,9 @@ namespace SimpleList
             }
             else
             {
-                _end.NextItem = new Node<T?>(item);
+                var newItem = new Node<T?>(item);
+                _end.NextItem = newItem;
+                _end = newItem;
             }
         }
 
